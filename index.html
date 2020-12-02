@@ -11,12 +11,12 @@
         <h1>{{titulo}}</h1>
         <button class="btn btn-primary" v-on:click="consultarCuentas">Consultar Cuentas</button>
         <hr>
-        <div v-for="p in listCuentas">
-            <h4>NUMERO CUENTA CORRIENTE: {{p.NroCuentaCorriente}}</h3>
-            <h4>RAZON SOCIAL: {{p.RazonSocial}}</h3>
-            <h4>CUIT: {{p.Cuit}}</h4>
-            <h4>SALDO: {{p.Saldo}}</h4>
-            <h4>EMAIL: {{p.Email}}</h4>
+        <div v-for="c in listCuentas">
+            <h4>NUMERO CUENTA CORRIENTE: {{c.NroCuentaCorriente}}</h3>
+            <h4>RAZON SOCIAL: {{c.Proveedor.RazonSocial}}</h3>
+            <h4>CUIT: {{c.Proveedor.Cuit}}</h4>
+            <h4>SALDO: {{c.Saldo}}</h4>
+            <h4>EMAIL: {{c.Proveedor.Email}}</h4>
             <hr>
         </div>
     </div>
